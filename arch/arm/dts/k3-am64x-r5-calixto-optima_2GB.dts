@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (C) 2020-2023 Texas Instruments Incorporated - https://www.ti.com/
+ */
+
+#include "k3-am64x-calixto-optima_2GB.dts"
+#include "k3-am64-calixto-optima-lpddr4-2GB.dtsi"
+#include "k3-am64-ddr.dtsi"
+
+#include "k3-am64x-calixto-optima_2GB-u-boot.dtsi"
+#include "k3-am642-r5.dtsi"
+
+&sdhci0 {
+	clocks = <&clk_200mhz>;
+	clock-names = "clk_xin";
+};
+
+&sdhci1 {
+	clocks = <&clk_200mhz>;
+	clock-names = "clk_xin";
+};

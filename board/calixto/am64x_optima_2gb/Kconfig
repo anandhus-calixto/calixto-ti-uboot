@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: GPL-2.0+
+#
+# Copyright (C) 2020-2021 Texas Instruments Incorporated - https://www.ti.com/
+
+if TARGET_AM64X_OPTIMA_2GB_A53
+
+config SYS_BOARD
+       default "am64x_optima_2gb"
+
+config SYS_VENDOR
+       default "calixto"
+
+config SYS_CONFIG_NAME
+       default "am64x_optima_2gb"
+
+source "board/ti/common/Kconfig"
+
+endif
+
+if TARGET_AM64X_OPTIMA_2GB_R5
+
+config SYS_BOARD
+       default "am64x_optima_2gb"
+
+config SYS_VENDOR
+       default "calixto"
+
+config SYS_CONFIG_NAME
+       default "am64x_optima_2gb"
+
+source "board/ti/common/Kconfig"
+
+endif

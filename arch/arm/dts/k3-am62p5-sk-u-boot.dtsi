@@ -1,0 +1,33 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Common AM62Px EVM dts file for SPLs
+ * Copyright (C) 2022 Texas Instruments Incorporated - https://www.ti.com/
+ */
+
+#include "k3-am62p-sk-binman.dtsi"
+
+/ {
+	chosen {
+		stdout-path = "serial2:115200n8";
+		tick-timer = &main_timer0;
+	};
+
+};
+
+&wkup_r5fss0_core0_memory_region {
+	bootph-pre-ram;
+};
+
+&dmsc {
+	bootph-pre-ram;
+};
+
+&wkup_r5fss0_core0 {
+	bootph-pre-ram;
+};
+
+&ospi0 {
+	flash@0 {
+		spi-max-frequency = <25000000>;
+	};
+};
